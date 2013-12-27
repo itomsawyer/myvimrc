@@ -110,6 +110,9 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
+filetype plugin indent on 
+set foldenable
+set foldmethod=indent
 
 try
     colorscheme desert
