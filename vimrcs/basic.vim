@@ -12,6 +12,7 @@
 "    -> Spell checking
 "    -> Misc
 "    -> Helper functions
+"    -> language syntax
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -26,6 +27,8 @@ set history=700
 filetype plugin on
 filetype indent on
 
+" Set line number
+set nu
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -102,7 +105,7 @@ set t_vb=
 set tm=500
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+"set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -111,12 +114,18 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable 
 
+set foldenable
+set foldmethod=syntax
+
 try
     colorscheme desert
 catch
 endtry
 
 set background=dark
+
+hi Pmenu ctermbg=8 ctermfg=34
+hi PmenuSel ctermbg=5 ctermfg=34
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -141,7 +150,6 @@ set nobackup
 set nowb
 set noswapfile
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -159,10 +167,15 @@ set tabstop=4
 set lbr
 set tw=500
 
-set ai "Auto indent
-set si "Smart indent
+"set ai "Auto indent
+set cindent "C-style indent
+"set si "Smart indent
 set wrap "Wrap lines
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Setup ctags searching path
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tags+=~/.tags/linux.tags
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -386,3 +399,12 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Language syntax
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
