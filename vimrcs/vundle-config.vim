@@ -32,6 +32,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-markdown'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'fatih/vim-go'
 
 
 filetype plugin indent on     " required!
