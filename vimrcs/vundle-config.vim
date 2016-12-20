@@ -25,7 +25,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'c.vim'
 Bundle 'mattn/emmet-vim'
-Bundle 'ervandew/supertab'
+"Bundle 'ervandew/supertab'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/nginx.vim'
 Bundle 'vim-scripts/taglist.vim'
@@ -33,6 +33,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-markdown'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'fatih/vim-go'
+Bundle 'Shougo/neocomplete.vim'
 
 
 filetype plugin indent on     " required!

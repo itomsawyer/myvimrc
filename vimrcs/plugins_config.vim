@@ -103,3 +103,9 @@ map <leader>tt :TlistToggle<cr>
 "" => vim-go config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:go_fmt_fail_silently = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => neocomplete  config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neocomplete#enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
