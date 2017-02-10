@@ -110,5 +110,24 @@ let g:go_def_mapping_enabled = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => neocomplete  config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set completeopt+=menuone
+set completeopt-=preview
+let g:echodoc_enable_at_startup = 1
 let g:neocomplete#enable_at_startup = 1
+"set cmdheight=2
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+    let g:neocomplete#sources#omni#input_patterns = {}
+endif
+
+" golang fix
+let g:neocomplete#sources#omni#input_patterns.go = '[^.[:digit:] *\t]\.\w*'
+
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => ctags config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tags+=~/.vim_runtime/tags/libc6.tags
