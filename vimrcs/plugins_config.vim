@@ -110,9 +110,9 @@ let g:go_def_mapping_enabled = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => neocomplete  config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set completeopt+=menuone
+"set completeopt+=menuone
 set completeopt-=preview
-let g:echodoc_enable_at_startup = 1
+"let g:echodoc_enable_at_startup = 1
 let g:neocomplete#enable_at_startup = 1
 "set cmdheight=2
 

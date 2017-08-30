@@ -115,9 +115,6 @@ set tm=500
 syntax enable 
 filetype plugin indent on 
 set foldenable
-set foldmethod=indent
-
-set foldenable
 set foldmethod=syntax
 
 try

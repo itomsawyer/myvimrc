@@ -35,7 +35,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'nsf/gocode'
 Bundle 'fatih/vim-go'
 Bundle 'Shougo/neocomplete.vim'
-Bundle "Shougo/echodoc.vim"
+"Bundle "Shougo/echodoc.vim"
 
 
 filetype plugin indent on     " required!
