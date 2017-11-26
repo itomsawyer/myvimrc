@@ -103,9 +103,9 @@ map <leader>tt :TlistToggle<cr>
 "" => vim-go config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:go_fmt_fail_silently = 1
+let g:go_fmt_command = "goimports"
 let g:go_def_mode = 'guru'
 let g:go_def_mapping_enabled = 1
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => neocomplete  config
