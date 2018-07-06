@@ -35,6 +35,7 @@ Bundle 'fatih/vim-go'
 Bundle 'Shougo/neocomplete.vim'
 "Bundle "Shougo/echodoc.vim"
 
+Bundle 'derekwyatt/vim-scala'
 
 filetype plugin indent on     " required!
 "
