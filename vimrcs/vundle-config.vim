@@ -32,8 +32,14 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nsf/gocode'
 Bundle 'fatih/vim-go'
-Bundle 'Shougo/neocomplete.vim'
+
+"Bundle 'Shougo/neocomplete.vim'
 "Bundle "Shougo/echodoc.vim"
+
+Bundle 'roxma/nvim-yarp'
+Bundle 'roxma/vim-hug-neovim-rpc'
+Bundle 'Shougo/deoplete.nvim'
+Bundle 'zchee/deoplete-go'
 
 Bundle 'derekwyatt/vim-scala'
 

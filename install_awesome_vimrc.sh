@@ -14,4 +14,7 @@ source ~/.vim_runtime/vimrcs/custom.vim
 catch
 endtry' > ~/.vimrc
 
+echo "Install neovim..."
+pip3 install neovim
+
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
