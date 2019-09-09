@@ -30,7 +30,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/nginx.vim'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'nsf/gocode'
+Bundle 'mdempsky/gocode'
 Bundle 'fatih/vim-go'
 
 "Bundle 'Shougo/neocomplete.vim'
@@ -42,6 +42,9 @@ Bundle 'Shougo/deoplete.nvim'
 Bundle 'zchee/deoplete-go'
 
 Bundle 'derekwyatt/vim-scala'
+
+Bundle 'vim-pandoc/vim-pandoc'
+Bundle 'vim-pandoc/vim-pandoc-syntax'
 
 filetype plugin indent on     " required!
 "

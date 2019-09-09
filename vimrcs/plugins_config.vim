@@ -208,3 +208,12 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 "" => ctags config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tags+=~/.vim_runtime/tags/libc6.tags
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => pandoc conig
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+command! -nargs=* RunSilent
+      \ | execute ':silent !'.'<args>'
+      \ | execute ':redraw!'
+nmap <Leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
+nmap <Leader>pp :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
