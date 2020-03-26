@@ -25,26 +25,27 @@ Bundle 'gmarik/vundle'
 
 
 Bundle 'c.vim'
-Bundle 'mattn/emmet-vim'
+"Bundle 'mattn/emmet-vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/nginx.vim'
-Bundle 'vim-scripts/taglist.vim'
+"Bundle 'vim-scripts/nginx.vim'
+"Bundle 'vim-scripts/taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'mdempsky/gocode'
+"Bundle 'mdempsky/gocode'
 Bundle 'fatih/vim-go'
+Bundle 'ervandew/supertab'
 
 "Bundle 'Shougo/neocomplete.vim'
-"Bundle "Shougo/echodoc.vim"
+"Bundle 'Shougo/echodoc.vim'
 
-Bundle 'roxma/nvim-yarp'
-Bundle 'roxma/vim-hug-neovim-rpc'
-Bundle 'Shougo/deoplete.nvim'
-Bundle 'zchee/deoplete-go'
+"Bundle 'roxma/nvim-yarp'
+"Bundle 'roxma/vim-hug-neovim-rpc'
+"Bundle 'Shougo/deoplete.nvim'
+"Bundle 'zchee/deoplete-go'
 
-Bundle 'derekwyatt/vim-scala'
+"Bundle 'derekwyatt/vim-scala'
 
-Bundle 'vim-pandoc/vim-pandoc'
-Bundle 'vim-pandoc/vim-pandoc-syntax'
+"Bundle 'vim-pandoc/vim-pandoc'
+"Bundle 'vim-pandoc/vim-pandoc-syntax'
 
 filetype plugin indent on     " required!
 "

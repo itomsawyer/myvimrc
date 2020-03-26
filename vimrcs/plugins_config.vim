@@ -54,7 +54,7 @@
 " => ZenCoding
 """"""""""""""""""""""""""""""
 " Enable all functions in all modes
-let g:user_zen_mode='a'
+"let g:user_zen_mode='a'
 
 """""""""""""""""""""""""""""""
 "" => snipMate (beside <TAB> support <CTRL-j>)
@@ -80,7 +80,7 @@ map <leader>nf :NERDTreeFind<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tagslist 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>tt :TlistToggle<cr>
+"map <leader>tt :TlistToggle<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => vim-multiple-cursors
@@ -99,10 +99,16 @@ map <leader>tt :TlistToggle<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => vim-go config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set completeopt=menuone
 let g:go_fmt_fail_silently = 1
-let g:go_fmt_command = "goimports"
-let g:go_def_mode = 'guru'
+let g:go_fmt_command = "goreturns"
+let g:go_def_mode = 'gopls'
 let g:go_def_mapping_enabled = 1
+let g:go_gopls_complete_unimported = 1
+let g:go_info_mode = 'gopls'
+let g:go_def_mode = 'gopls'
+let g:go_referrers_mode = 'gopls'
+let g:go_gopls_deep_completion = 1
 
 au FileType go set noexpandtab
 au FileType go set shiftwidth=4
@@ -117,41 +123,41 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
-
 let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
+let g:go_updatetime = 500
 
 " Error and warning signs.
-let g:ale_sign_error = '⤫'
-let g:ale_sign_warning = '⚠'
+"let g:ale_sign_error = '⤫'
+"let g:ale_sign_warning = '⚠'
 " Enable integration with airline.
-let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#ale#enabled = 1
 
-au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
-au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
-au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
+"au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
+"au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
+"au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
+"au FileType go nmap <Leader>gi :GoInfo <cr>
+"au FileType go nmap <F10> :GoTest -short<cr>
+"au FileType go nmap <F9> :GoCoverageToggle -short<cr>
 
-au FileType go nmap <F10> :GoTest -short<cr>
-au FileType go nmap <F9> :GoCoverageToggle -short<cr>
-
-let g:go_auto_type_info = 1
 
 " Go related mappings
-au FileType go nmap <Leader>i <Plug>(go-info)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>r <Plug>(go-run)
-au FileType go nmap <Leader>b <Plug>(go-build)
-au FileType go nmap <Leader>t <Plug>(go-test)
-au FileType go nmap gd <Plug>(go-def-tab)
+"au FileType go nmap <Leader>i <Plug>(go-info)
+"au FileType go nmap <Leader>gd <Plug>(go-doc)
+"au FileType go nmap <Leader>r <Plug>(go-run)
+"au FileType go nmap <Leader>b <Plug>(go-build)
+"au FileType go nmap <Leader>t <Plug>(go-test)
+"au FileType go nmap gd <Plug>(go-def-tab)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => deoplete.nvim config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:deoplete#enable_at_startup = 1
-set completeopt-=preview
-
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"let g:deoplete#enable_at_startup = 1
+"set completeopt-=preview
+"
+"" <TAB>: completion.
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => neocomplete  config
@@ -207,13 +213,18 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => ctags config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tags+=~/.vim_runtime/tags/libc6.tags
+"set tags+=~/.vim_runtime/tags/libc6.tags
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => pandoc conig
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-command! -nargs=* RunSilent
-      \ | execute ':silent !'.'<args>'
-      \ | execute ':redraw!'
-nmap <Leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
-nmap <Leader>pp :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
+"command! -nargs=* RunSilent
+"      \ | execute ':silent !'.'<args>'
+"      \ | execute ':redraw!'
+"nmap <Leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
+"nmap <Leader>pp :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
+""""""""""""'
+" => supertab"
+"""""""""""""
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
