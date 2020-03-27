@@ -24,7 +24,7 @@ Bundle 'gmarik/vundle'
 "Bundle 'file:///Users/gmarik/path/to/plugin'
 
 
-Bundle 'c.vim'
+"Bundle 'c.vim'
 "Bundle 'mattn/emmet-vim'
 Bundle 'scrooloose/nerdtree'
 "Bundle 'vim-scripts/nginx.vim'

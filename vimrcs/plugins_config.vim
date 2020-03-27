@@ -101,7 +101,7 @@ map <leader>nf :NERDTreeFind<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set completeopt=menuone
 let g:go_fmt_fail_silently = 1
-let g:go_fmt_command = "goreturns"
+let g:go_fmt_command = "gopls"
 let g:go_def_mode = 'gopls'
 let g:go_def_mapping_enabled = 1
 let g:go_gopls_complete_unimported = 1
