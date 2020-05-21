@@ -137,6 +137,7 @@ let g:go_updatetime = 500
 "au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
 "au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
 "au FileType go nmap <Leader>gi :GoInfo <cr>
+au FileType go nmap <Leader>i :GoImports <cr>
 "au FileType go nmap <F10> :GoTest -short<cr>
 "au FileType go nmap <F9> :GoCoverageToggle -short<cr>
 
