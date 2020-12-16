@@ -229,3 +229,9 @@ au FileType go nmap <Leader>i :GoImports <cr>
 """""""""""""
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
+
+
+""""""""""""'
+" => git-blame
+"""""""""""""
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
