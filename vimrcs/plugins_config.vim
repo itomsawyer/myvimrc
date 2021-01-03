@@ -224,14 +224,16 @@ au FileType go nmap <Leader>i :GoImports <cr>
 "      \ | execute ':redraw!'
 "nmap <Leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
 "nmap <Leader>pp :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
+"
 """"""""""""'
 " => supertab"
 """""""""""""
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 
-
 """"""""""""'
-" => git-blame
+" => rust-lang"
 """""""""""""
-nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+let g:rustfmt_autosave = 1
+
+

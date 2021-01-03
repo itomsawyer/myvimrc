@@ -33,7 +33,6 @@ Bundle 'altercation/vim-colors-solarized'
 "Bundle 'mdempsky/gocode'
 Bundle 'fatih/vim-go'
 Bundle 'ervandew/supertab'
-Bundle 'zivyangll/git-blame.vim'
 
 "Bundle 'Shougo/neocomplete.vim'
 "Bundle 'Shougo/echodoc.vim'
@@ -47,6 +46,8 @@ Bundle 'zivyangll/git-blame.vim'
 
 "Bundle 'vim-pandoc/vim-pandoc'
 "Bundle 'vim-pandoc/vim-pandoc-syntax'
+
+Bundle 'rust-lang/rust.vim'
 
 filetype plugin indent on     " required!
 "
