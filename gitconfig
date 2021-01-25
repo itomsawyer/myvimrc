@@ -108,3 +108,5 @@
 [log]
 	date = relative
 
+[status]
+	showuntrackedfiles = no
