@@ -48,6 +48,7 @@ Bundle 'ervandew/supertab'
 "Bundle 'vim-pandoc/vim-pandoc-syntax'
 
 Bundle 'rust-lang/rust.vim'
+Bundle 'racer-rust/vim-racer'
 
 filetype plugin indent on     " required!
 "

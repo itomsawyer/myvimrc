@@ -17,4 +17,9 @@ endtry' > ~/.vimrc
 echo "Install neovim..."
 pip3 install neovim
 
+echo "Install rust-racer"
+rustup toolchain add nightly
+cargo +nightly install racer
+
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
+
