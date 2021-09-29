@@ -241,6 +241,8 @@ let g:rustfmt_autosave = 1
 """""""""""""
 set hidden
 
+let g:racer_experimental_completer = 1
+
 augroup Racer
     autocmd!
     autocmd FileType rust nmap <buffer> <c-]>      <Plug>(rust-def)
