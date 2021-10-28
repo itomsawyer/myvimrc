@@ -33,6 +33,7 @@ Bundle 'altercation/vim-colors-solarized'
 "Bundle 'mdempsky/gocode'
 Bundle 'fatih/vim-go'
 Bundle 'ervandew/supertab'
+Bundle 'preservim/tagbar'
 
 "Bundle 'Shougo/neocomplete.vim'
 "Bundle 'Shougo/echodoc.vim'
