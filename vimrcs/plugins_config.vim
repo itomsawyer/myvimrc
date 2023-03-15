@@ -33,18 +33,18 @@
 "endif
 "
 "
-"""""""""""""""""""""""""""""""
-"" => CTRL-P
-"""""""""""""""""""""""""""""""
-"let g:ctrlp_working_path_mode = 0
-"
-"let g:ctrlp_map = '<c-f>'
-"map <c-b> :CtrlPBuffer<cr>
-"
-"let g:ctrlp_max_height = 20
-"let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-"
-"
+""""""""""""""""""""""""""""""
+" => CTRL-P
+""""""""""""""""""""""""""""""
+let g:ctrlp_working_path_mode = 0
+
+let g:ctrlp_map = '<c-f>'
+map <c-b> :CtrlPBuffer<cr>
+
+let g:ctrlp_max_height = 20
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+
+
 """""""""""""""""""""""""""""""
 "" => Peepopen
 """""""""""""""""""""""""""""""
@@ -157,15 +157,15 @@ au FileType go nmap <Leader>] :GoCallers <cr>
 "au FileType go nmap <Leader>t <Plug>(go-test)
 "au FileType go nmap gd <Plug>(go-def-tab)
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" => deoplete.nvim config
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => deoplete.nvim config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"let g:deoplete#enable_at_startup = 1
-"set completeopt-=preview
-"
-"" <TAB>: completion.
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+let g:deoplete#enable_at_startup = 1
+set completeopt-=preview
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => neocomplete  config
