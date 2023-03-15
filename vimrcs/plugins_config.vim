@@ -143,7 +143,8 @@ let g:go_updatetime = 500
 "au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
 au FileType go nmap <Leader>gi :GoImplements <cr>
 au FileType go nmap <Leader>i :GoImports <cr>
-au FileType go nmap <Leader>] :GoReferrers <cr>
+au FileType go nmap <Leader><c-]> :GoReferrers <cr>
+au FileType go nmap <Leader>] :GoCallers <cr>
 "au FileType go nmap <F10> :GoTest -short<cr>
 "au FileType go nmap <F9> :GoCoverageToggle -short<cr>
 
