@@ -38,8 +38,8 @@
 """"""""""""""""""""""""""""""
 let g:ctrlp_working_path_mode = 0
 
-let g:ctrlp_map = '<c-f>'
-map <c-b> :CtrlPBuffer<cr>
+"let g:ctrlp_map = '<c-f>'
+"map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
@@ -132,6 +132,16 @@ let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_updatetime = 500
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ale config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:ale_linters = {
+"    \ 'python': ['pylint'],
+"    \ 'vim': ['vint'],
+"    \ 'cpp': ['clang'],
+"    \ 'c': ['clang']
+"\}
+
 " Error and warning signs.
 "let g:ale_sign_error = '⤫'
 "let g:ale_sign_warning = '⚠'
@@ -157,12 +167,24 @@ au FileType go nmap <Leader>] :GoCallers <cr>
 "au FileType go nmap <Leader>t <Plug>(go-test)
 "au FileType go nmap gd <Plug>(go-def-tab)
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => neovim code format
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neoformat_cpp_clangformat = {
+    \ 'exe': 'clang-format',
+    \ 'args': ['--style="{IndentWidth: 4}"']
+\}
+let g:neoformat_enabled_cpp = ['clangformat']
+let g:neoformat_enabled_c = ['clangformat']
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => deoplete.nvim config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
+call deoplete#custom#source('_', 'max_menu_width', 80)
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -236,6 +258,8 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " => supertab"
 """""""""""""
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
+
 
 
 """"""""""""'

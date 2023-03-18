@@ -43,6 +43,10 @@ Bundle 'roxma/nvim-yarp'
 Bundle 'roxma/vim-hug-neovim-rpc'
 Bundle 'Shougo/deoplete.nvim'
 "Bundle 'zchee/deoplete-go'
+Bundle 'zchee/deoplete-clang'
+
+
+"Bundle 'dense-analysis/ale'
 
 "Bundle 'derekwyatt/vim-scala'
 
