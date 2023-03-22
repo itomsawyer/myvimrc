@@ -42,8 +42,8 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'roxma/nvim-yarp'
 Bundle 'roxma/vim-hug-neovim-rpc'
 Bundle 'Shougo/deoplete.nvim'
-"Bundle 'zchee/deoplete-go'
 Bundle 'zchee/deoplete-clang'
+Bundle 'Shougo/neoinclude.vim'
 
 
 "Bundle 'dense-analysis/ale'

@@ -77,10 +77,6 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => tagslist 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"map <leader>tt :TlistToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tagbar
@@ -120,6 +116,25 @@ au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
 au FileType go set tabstop=4
 
+" " Go related mappings
+"au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
+"au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
+"au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
+au FileType go nmap <Leader>gi :GoImplements <cr>
+au FileType go nmap <Leader>i :GoImports <cr>
+au FileType go nmap <Leader><c-]> :GoReferrers <cr>
+au FileType go nmap <Leader>] :GoCallers <cr>
+"au FileType go nmap <F10> :GoTest -short<cr>
+"au FileType go nmap <F9> :GoCoverageToggle -short<cr>
+"au FileType go nmap <Leader>i :GoInfo <cr>
+"au FileType go nmap <Leader>gd :GoDoc <cr>
+"au FileType go nmap <Leader>r <Plug>(go-run)
+"au FileType go nmap <Leader>b <Plug>(go-build)
+"au FileType go nmap <Leader>t <Plug>(go-test)
+"au FileType go nmap gd <Plug>(go-def-tab)
+
+
+
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
@@ -148,26 +163,6 @@ let g:go_updatetime = 500
 " Enable integration with airline.
 " let g:airline#extensions#ale#enabled = 1
 
-"au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
-"au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
-"au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
-au FileType go nmap <Leader>gi :GoImplements <cr>
-au FileType go nmap <Leader>i :GoImports <cr>
-au FileType go nmap <Leader><c-]> :GoReferrers <cr>
-au FileType go nmap <Leader>] :GoCallers <cr>
-"au FileType go nmap <F10> :GoTest -short<cr>
-"au FileType go nmap <F9> :GoCoverageToggle -short<cr>
-
-
-" Go related mappings
-"au FileType go nmap <Leader>i <Plug>(go-info)
-"au FileType go nmap <Leader>gd <Plug>(go-doc)
-"au FileType go nmap <Leader>r <Plug>(go-run)
-"au FileType go nmap <Leader>b <Plug>(go-build)
-"au FileType go nmap <Leader>t <Plug>(go-test)
-"au FileType go nmap gd <Plug>(go-def-tab)
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => neovim code format
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -182,63 +177,18 @@ let g:neoformat_enabled_c = ['clangformat']
 " => deoplete.nvim config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
+au FileType c call deoplete#toggle()
+au FileType cpp call deoplete#toggle()
+set completeopt+=menuone
 set completeopt-=preview
 call deoplete#custom#source('_', 'max_menu_width', 80)
 
+let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+
 " <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" => neocomplete  config
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set completeopt+=menuone
-"set completeopt-=preview
-"set cmdheight=2
-
-" Enable heavy omni completion.
-"if !exists('g:neocomplete#sources#omni#input_patterns')
-"    let g:neocomplete#sources#omni#input_patterns = {}
-"endif
-
-" golang fix
-" let g:neocomplete#sources#omni#input_patterns.go = '[^.[:digit:] *\t]\.\w*'
-
-
-" " Disable AutoComplPop.
-" let g:acp_enableAtStartup = 0
-" " Use neocomplete.
-" let g:neocomplete#enable_at_startup = 1
-" " Use smartcase.
-" let g:neocomplete#enable_smart_case = 1
-" " Set minimum syntax keyword length.
-" let g:neocomplete#sources#syntax#min_keyword_length = 3
-"
-" " Plugin key-mappings.
-" inoremap <expr><C-g>     neocomplete#undo_completion()
-" inoremap <expr><C-l>     neocomplete#complete_common_string()
-"
-" " Recommended key-mappings.
-" " <CR>: close popup and save indent.
-" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-" function! s:my_cr_function()
-"     return neocomplete#close_popup() . "\<CR>"
-" endfunction
-" " <TAB>: completion.
 " inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" " <C-h>, <BS>: close popup and delete backword char.
-" inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-" inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-" inoremap <expr><C-y>  neocomplete#close_popup()
-" inoremap <expr><C-e>  neocomplete#cancel_popup()
-"
-" " Go related mappings
-" au FileType go nmap <Leader>i <Plug>(go-info)
-" au FileType go nmap <Leader>gd <Plug>(go-doc)
-" au FileType go nmap <Leader>r <Plug>(go-run)
-" au FileType go nmap <Leader>b <Plug>(go-build)
-" au FileType go nmap <Leader>t <Plug>(go-test)
-" au FileType go nmap gd <Plug>(go-def-tab)
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => ctags config
@@ -254,6 +204,8 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 "nmap <Leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
 "nmap <Leader>pp :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
 "
+
+
 """"""""""""'
 " => supertab"
 """""""""""""
