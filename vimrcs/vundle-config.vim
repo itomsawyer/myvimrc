@@ -24,7 +24,7 @@ Bundle 'easymotion/vim-easymotion'
 "Bundle 'file:///Users/gmarik/path/to/plugin'
 
 
-Bundle 'c.vim'
+"Bundle 'c.vim'
 "Bundle 'mattn/emmet-vim'
 Bundle 'scrooloose/nerdtree'
 "Bundle 'vim-scripts/nginx.vim'
@@ -36,15 +36,19 @@ Bundle 'ervandew/supertab'
 Bundle 'preservim/tagbar'
 Bundle 'ctrlpvim/ctrlp.vim'
 
-"Bundle 'Shougo/neocomplete.vim'
+Bundle 'prabirshrestha/async.vim'
+Bundle 'prabirshrestha/vim-lsp'
+Bundle 'mattn/vim-lsp-settings'
+
+Bundle 'prabirshrestha/asyncomplete.vim'
+"Bundle 'prabirshrestha/asyncomplete-lsp.vim'
+"Bundle 'Shougo/ddc.vim'
+"Bundle 'shun/ddc-vim-lsp'
+
+"Bundle 'https://gitee.com/Jimmy_Huang/EasyCompleteYou2'
+
+
 "Bundle 'Shougo/echodoc.vim'
-
-Bundle 'roxma/nvim-yarp'
-Bundle 'roxma/vim-hug-neovim-rpc'
-Bundle 'Shougo/deoplete.nvim'
-Bundle 'zchee/deoplete-clang'
-Bundle 'Shougo/neoinclude.vim'
-
 
 "Bundle 'dense-analysis/ale'
 
