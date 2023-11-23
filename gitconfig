@@ -8,7 +8,7 @@
 	hreset = reset --hard
 	co = checkout
 	df = diff --color --color-words --abbrev
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	lg = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	cherrypick = cherry-pick
 	cherry = cherry-pick
 	cp = cherry-pick
@@ -30,12 +30,12 @@
 	attributesfile = ~/.gitattributes
 	precomposeUnicode = true
 
-[pager]
-	# insanely beautiful diffs ==> npm install -g diff-so-fancy
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	show = diff-so-fancy | less --tabs=4 -RFX
+#[pager]
+#	# insanely beautiful diffs ==> npm install -g diff-so-fancy
+#	diff = diff-so-fancy | less --tabs=4 -RFX
+#	show = diff-so-fancy | less --tabs=4 -RFX
 
-[interactive]
+#[interactive]
   # disabled until github.com/so-fancy/diff-so-fancy/pull/172 is resolved :(
 	# diffFilter = "diff-so-fancy"
 
@@ -67,8 +67,9 @@
 
 # git mergetool
 [merge]
-	tool = opendiff
+	tool = vimdiff
 	renameLimit = 0
+	conflictstyle = diff3
 
 
 	
@@ -108,5 +109,34 @@
 [log]
 	date = relative
 
+
+[url "ssh://git@gitlab.alipay-inc.com/"]
+	insteadOf = http://gitlab.alipay-inc.com/
+[url "ssh://git@gitlab.alipay-inc.com/"]
+	insteadOf = https://gitlab.alipay-inc.com/
+[url "ssh://git@code.alipay.com/"]
+	insteadOf = https://code.alipay.com/
+[url "ssh://git@code.alipay.com/"]
+	insteadOf = http://code.alipay.com/
+[url "ssh://git@code.alibaba-inc.com/"]
+	insteadOf = https://code.alibaba-inc.com/
+[url "ssh://git@code.alibaba-inc.com/"]
+	insteadOf = http://code.alibaba-inc.com/
+[url "ssh://git@gitlab.alibaba-inc.com/"]
+	insteadOf = http://gitlab.alibaba-inc.com/
+[url "ssh://git@gitlab.alibaba-inc.com/"]
+	insteadOf = https://gitlab.alibaba-inc.com/
+[url "ssh://git@code.alibaba-inc.com/"]
+	insteadOf = http://code.alibaba-inc.com/
+[url "ssh://git@code.alibaba-inc.com/"]
+	insteadOf = https://code.alibaba-inc.com/
+
+[user]
+	name = yitai
+	email = gaoxiang.gx@alibaba-inc.com
 [status]
 	showuntrackedfiles = no
+[mergetool]
+	prompt = false
+[pull]
+	ff = only
