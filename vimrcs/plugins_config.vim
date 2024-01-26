@@ -203,23 +203,23 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 """""""""""""
 let g:rustfmt_autosave = 1
 
-""""""""""""'
-" => rust-racer"
-"""""""""""""
-set hidden
-
-let g:racer_experimental_completer = 1
-
-augroup Racer
-    autocmd!
-    autocmd FileType rust nmap <buffer> <c-]>      <Plug>(rust-def)
-    autocmd FileType rust nmap <buffer> gd         <Plug>(rust-def)
-    autocmd FileType rust nmap <buffer> gs         <Plug>(rust-def-split)
-    autocmd FileType rust nmap <buffer> gx         <Plug>(rust-def-vertical)
-    "autocmd FileType rust nmap <buffer> <leader>gt <Plug>(rust-def-tab)
-    autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
-    autocmd FileType rust nmap <buffer> <leader>gD <Plug>(rust-doc-tab)
-augroup END
+"""""""""""""'
+"" => rust-racer"
+""""""""""""""
+"set hidden
+"
+"let g:racer_experimental_completer = 1
+"
+"augroup Racer
+"    autocmd!
+"    autocmd FileType rust nmap <buffer> <c-]>      <Plug>(rust-def)
+"    autocmd FileType rust nmap <buffer> gd         <Plug>(rust-def)
+"    autocmd FileType rust nmap <buffer> gs         <Plug>(rust-def-split)
+"    autocmd FileType rust nmap <buffer> gx         <Plug>(rust-def-vertical)
+"    "autocmd FileType rust nmap <buffer> <leader>gt <Plug>(rust-def-tab)
+"    autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
+"    autocmd FileType rust nmap <buffer> <leader>gD <Plug>(rust-doc-tab)
+"augroup END
 
 """"""""'
 " => vim-lsp
