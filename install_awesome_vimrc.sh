@@ -14,9 +14,6 @@ source ~/.vim_runtime/vimrcs/custom.vim
 catch
 endtry' > ~/.vimrc
 
-echo "Install neovim..."
-pip3 install neovim
-
 echo "Install rust"
 
 echo 'export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup' >> ~/.bash_profile
@@ -27,3 +24,5 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup component add rust-analyzer
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
+
+echo "Full feature require manually install universal ctags" "(Refers to https://github.com/universal-ctags/ctags)"
