@@ -13,52 +13,23 @@ Bundle 'gmarik/vundle'
 "" original repos on github
 "Bundle 'tpope/vim-fugitive'
 Bundle 'easymotion/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Bundle 'tpope/vim-rails.git'
-"" vim-scripts repos
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
-"" non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
-"" git repos on your local machine (ie. when working on your own plugin)
-"Bundle 'file:///Users/gmarik/path/to/plugin'
-
-
-"Bundle 'c.vim'
-"Bundle 'mattn/emmet-vim'
 Bundle 'scrooloose/nerdtree'
-"Bundle 'vim-scripts/nginx.vim'
-"Bundle 'vim-scripts/taglist.vim'
-"Bundle 'altercation/vim-colors-solarized'
-"Bundle 'mdempsky/gocode'
-Bundle 'fatih/vim-go'
 Bundle 'ervandew/supertab'
 Bundle 'preservim/tagbar'
 Bundle 'ctrlpvim/ctrlp.vim'
 
+Bundle 'fatih/vim-go'
+Bundle 'rust-lang/rust.vim'
+
 Bundle 'prabirshrestha/async.vim'
 Bundle 'prabirshrestha/vim-lsp'
 Bundle 'mattn/vim-lsp-settings'
-
 Bundle 'prabirshrestha/asyncomplete.vim'
-"Bundle 'prabirshrestha/asyncomplete-lsp.vim'
-"Bundle 'Shougo/ddc.vim'
-"Bundle 'shun/ddc-vim-lsp'
+Bundle 'prabirshrestha/asyncomplete-lsp.vim'
 
-"Bundle 'https://gitee.com/Jimmy_Huang/EasyCompleteYou2'
-
-
-"Bundle 'Shougo/echodoc.vim'
-
-"Bundle 'dense-analysis/ale'
-
-"Bundle 'derekwyatt/vim-scala'
 
 "Bundle 'vim-pandoc/vim-pandoc'
 "Bundle 'vim-pandoc/vim-pandoc-syntax'
-
-Bundle 'rust-lang/rust.vim'
-Bundle 'racer-rust/vim-racer'
 
 filetype plugin indent on     " required!
 "
