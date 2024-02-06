@@ -264,38 +264,38 @@ let g:lsp_diagnostics_enabled = 0
 let g:lsp_diagnostics_virtual_text_enabled = 0
 let g:lsp_diagnostics_signs_enabled = 0
 
-if executable('clangd')
-    augroup lsp_clangd
-        autocmd!
-        autocmd User lsp_setup call lsp#register_server({
-                    \ 'name': 'clangd',
-                    \ 'cmd': {server_info->['clangd']},
-                    \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-                    \ })
-        autocmd FileType c setlocal omnifunc=lsp#complete
-        autocmd FileType cpp setlocal omnifunc=lsp#complete
-        autocmd FileType objc setlocal omnifunc=lsp#complete
-        autocmd FileType objcpp setlocal omnifunc=lsp#complete
-    augroup end
-endif
-
-if executable('rust-analyzer')
-  au User lsp_setup call lsp#register_server({
-        \   'name': 'Rust Language Server',
-        \   'cmd': {server_info->['rust-analyzer']},
-        \   'whitelist': ['rust'],
-        \   'initialization_options': {
-        \     'cargo': {
-        \       'buildScripts': {
-        \         'enable': v:true,
-        \       },
-        \     },
-        \     'procMacro': {
-        \       'enable': v:true,
-        \     },
-        \   },
-        \ })
-endif
+"if executable('clangd')
+"    augroup lsp_clangd
+"        autocmd!
+"        autocmd User lsp_setup call lsp#register_server({
+"                    \ 'name': 'clangd',
+"                    \ 'cmd': {server_info->['clangd']},
+"                    \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+"                    \ })
+"        autocmd FileType c setlocal omnifunc=lsp#complete
+"        autocmd FileType cpp setlocal omnifunc=lsp#complete
+"        autocmd FileType objc setlocal omnifunc=lsp#complete
+"        autocmd FileType objcpp setlocal omnifunc=lsp#complete
+"    augroup end
+"endif
+"
+"if executable('rust-analyzer')
+"  au User lsp_setup call lsp#register_server({
+"        \   'name': 'Rust Language Server',
+"        \   'cmd': {server_info->['rust-analyzer']},
+"        \   'whitelist': ['rust'],
+"        \   'initialization_options': {
+"        \     'cargo': {
+"        \       'buildScripts': {
+"        \         'enable': v:true,
+"        \       },
+"        \     },
+"        \     'procMacro': {
+"        \       'enable': v:true,
+"        \     },
+"        \   },
+"        \ })
+"endif
 
 function! s:on_lsp_buffer_enabled() abort
 
